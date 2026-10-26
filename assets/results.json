@@ -1,0 +1,1065 @@
+{
+  "date": "25 October 2026",
+  "methods": [
+    {
+      "name": "AiOS",
+      "slug": "aios",
+      "input": "Image",
+      "paper": "https://arxiv.org/abs/2403.17934"
+    },
+    {
+      "name": "HybrIK-X",
+      "slug": "hybrik-x",
+      "input": "Image",
+      "paper": "https://arxiv.org/abs/2304.05690"
+    },
+    {
+      "name": "Multi-HMR",
+      "slug": "multi-hmr",
+      "input": "Image",
+      "paper": "https://arxiv.org/abs/2402.14654"
+    },
+    {
+      "name": "OSX",
+      "slug": "osx",
+      "input": "Image",
+      "paper": "https://arxiv.org/abs/2303.16160"
+    },
+    {
+      "name": "PEAR",
+      "slug": "pear",
+      "input": "Image",
+      "paper": "https://arxiv.org/abs/2601.22693"
+    },
+    {
+      "name": "PyMAF-X",
+      "slug": "pymaf-x",
+      "input": "Image",
+      "paper": "https://arxiv.org/abs/2207.06400"
+    },
+    {
+      "name": "SMPLer-X",
+      "slug": "smpler-x",
+      "input": "Image",
+      "paper": "https://arxiv.org/abs/2309.17448"
+    },
+    {
+      "name": "SMPLest-X",
+      "slug": "smplest-x",
+      "input": "Image",
+      "paper": "https://arxiv.org/abs/2501.09782"
+    },
+    {
+      "name": "Video-to-SMPL-X",
+      "slug": "video-to-smpl-x",
+      "input": "Video",
+      "paper": null
+    },
+    {
+      "name": "WHAC",
+      "slug": "whac",
+      "input": "Video",
+      "paper": "https://arxiv.org/abs/2403.12959"
+    }
+  ],
+  "datasets": [
+    {
+      "id": "lsch",
+      "name": "LSCh (OF-HMR)",
+      "language": "Chilean Sign Language",
+      "country": "Chile",
+      "n": 8,
+      "frames": 838,
+      "width": 1440,
+      "height": 1080,
+      "fps": 30.0,
+      "source": "assets/videos/lsch-source.mp4",
+      "poster": "assets/images/lsch-source.webp",
+      "methods": {
+        "AiOS": {
+          "video": "assets/videos/lsch-aios.mp4",
+          "poster": "assets/images/lsch-aios.webp"
+        },
+        "HybrIK-X": {
+          "video": "assets/videos/lsch-hybrik-x.mp4",
+          "poster": "assets/images/lsch-hybrik-x.webp"
+        },
+        "Multi-HMR": {
+          "video": "assets/videos/lsch-multi-hmr.mp4",
+          "poster": "assets/images/lsch-multi-hmr.webp"
+        },
+        "OSX": {
+          "video": "assets/videos/lsch-osx.mp4",
+          "poster": "assets/images/lsch-osx.webp"
+        },
+        "PEAR": {
+          "video": "assets/videos/lsch-pear.mp4",
+          "poster": "assets/images/lsch-pear.webp"
+        },
+        "PyMAF-X": {
+          "video": "assets/videos/lsch-pymaf-x.mp4",
+          "poster": "assets/images/lsch-pymaf-x.webp"
+        },
+        "SMPLer-X": {
+          "video": "assets/videos/lsch-smpler-x.mp4",
+          "poster": "assets/images/lsch-smpler-x.webp"
+        },
+        "SMPLest-X": {
+          "video": "assets/videos/lsch-smplest-x.mp4",
+          "poster": "assets/images/lsch-smplest-x.webp"
+        },
+        "Video-to-SMPL-X": {
+          "video": "assets/videos/lsch-video-to-smpl-x.mp4",
+          "poster": "assets/images/lsch-video-to-smpl-x.webp"
+        },
+        "WHAC": {
+          "video": "assets/videos/lsch-whac.mp4",
+          "poster": "assets/images/lsch-whac.webp"
+        }
+      },
+      "scores": {
+        "AiOS": {
+          "mre": {
+            "mean": 11.291739997732096,
+            "sd": 2.337332947295283,
+            "n": 8
+          },
+          "body": {
+            "mean": 12.80702775870816,
+            "sd": 3.789438026777573,
+            "n": 8
+          },
+          "face": {
+            "mean": 5.238566443248038,
+            "sd": 0.29345248269450913,
+            "n": 8
+          },
+          "left_hand": {
+            "mean": 19.30833683963769,
+            "sd": 9.340240937914709,
+            "n": 8
+          },
+          "right_hand": {
+            "mean": 17.54276814215176,
+            "sd": 3.1032424854132548,
+            "n": 8
+          }
+        },
+        "HybrIK-X": {
+          "mre": {
+            "mean": 17.12252485531117,
+            "sd": 2.0313863947101938,
+            "n": 8
+          },
+          "body": {
+            "mean": 16.42247401658482,
+            "sd": 3.0302141420060478,
+            "n": 8
+          },
+          "face": {
+            "mean": 12.8508662245871,
+            "sd": 2.726251610253815,
+            "n": 8
+          },
+          "left_hand": {
+            "mean": 20.183296449056773,
+            "sd": 5.96851928513806,
+            "n": 8
+          },
+          "right_hand": {
+            "mean": 24.635795890102983,
+            "sd": 5.32556672465461,
+            "n": 8
+          }
+        },
+        "Multi-HMR": {
+          "mre": {
+            "mean": 16.161014108801343,
+            "sd": 5.92922755839075,
+            "n": 8
+          },
+          "body": {
+            "mean": 19.137921832994785,
+            "sd": 7.013168189922157,
+            "n": 8
+          },
+          "face": {
+            "mean": 7.841527248199,
+            "sd": 2.457735590857765,
+            "n": 8
+          },
+          "left_hand": {
+            "mean": 32.04036609608258,
+            "sd": 20.48419593761682,
+            "n": 8
+          },
+          "right_hand": {
+            "mean": 19.635585147499107,
+            "sd": 2.6118459125594806,
+            "n": 8
+          }
+        },
+        "OSX": {
+          "mre": {
+            "mean": 16.632877788810273,
+            "sd": 2.268385182427078,
+            "n": 8
+          },
+          "body": {
+            "mean": 19.939516709827153,
+            "sd": 2.3863811624818245,
+            "n": 8
+          },
+          "face": {
+            "mean": 7.694453813163282,
+            "sd": 2.059903306461959,
+            "n": 8
+          },
+          "left_hand": {
+            "mean": 25.95804469554166,
+            "sd": 8.77850056852325,
+            "n": 8
+          },
+          "right_hand": {
+            "mean": 28.070557988359607,
+            "sd": 5.439806771187372,
+            "n": 8
+          }
+        },
+        "PEAR": {
+          "mre": {
+            "mean": 8.194044629000501,
+            "sd": 0.5548135352971472,
+            "n": 8
+          },
+          "body": {
+            "mean": 10.287715438309665,
+            "sd": 3.2142594844331263,
+            "n": 8
+          },
+          "face": {
+            "mean": 5.0876187139553,
+            "sd": 0.7098989514774817,
+            "n": 8
+          },
+          "left_hand": {
+            "mean": 11.360176165998569,
+            "sd": 2.424115982764533,
+            "n": 8
+          },
+          "right_hand": {
+            "mean": 11.973898654452457,
+            "sd": 1.184664001011926,
+            "n": 8
+          }
+        },
+        "PyMAF-X": {
+          "mre": {
+            "mean": 16.04412533166734,
+            "sd": 3.1533046767354658,
+            "n": 8
+          },
+          "body": {
+            "mean": 16.60247213925175,
+            "sd": 1.6866703240546916,
+            "n": 8
+          },
+          "face": {
+            "mean": 11.332302280999649,
+            "sd": 2.3946387101970026,
+            "n": 8
+          },
+          "left_hand": {
+            "mean": 22.474281716480874,
+            "sd": 8.915981116201664,
+            "n": 8
+          },
+          "right_hand": {
+            "mean": 20.897440124879786,
+            "sd": 4.089216521864901,
+            "n": 8
+          }
+        },
+        "SMPLer-X": {
+          "mre": {
+            "mean": 13.277584024784966,
+            "sd": 1.7942533740740965,
+            "n": 8
+          },
+          "body": {
+            "mean": 15.136826328672505,
+            "sd": 2.348686192378142,
+            "n": 8
+          },
+          "face": {
+            "mean": 6.039788541812349,
+            "sd": 0.7587790404461403,
+            "n": 8
+          },
+          "left_hand": {
+            "mean": 20.999165306650053,
+            "sd": 8.183789727639644,
+            "n": 8
+          },
+          "right_hand": {
+            "mean": 22.60229397188551,
+            "sd": 2.466615924169222,
+            "n": 8
+          }
+        },
+        "SMPLest-X": {
+          "mre": {
+            "mean": 11.370184313158425,
+            "sd": 1.0208699177102842,
+            "n": 8
+          },
+          "body": {
+            "mean": 18.105740522861943,
+            "sd": 2.6208473688540286,
+            "n": 8
+          },
+          "face": {
+            "mean": 5.48516093379034,
+            "sd": 0.707427936746839,
+            "n": 8
+          },
+          "left_hand": {
+            "mean": 16.876067192254315,
+            "sd": 4.276178783863629,
+            "n": 8
+          },
+          "right_hand": {
+            "mean": 18.23205643832689,
+            "sd": 2.8221062342455876,
+            "n": 8
+          }
+        },
+        "Video-to-SMPL-X": {
+          "mre": {
+            "mean": 24.029391161746116,
+            "sd": 10.74598836014576,
+            "n": 8
+          },
+          "body": {
+            "mean": 24.474437952738313,
+            "sd": 5.951062671804215,
+            "n": 8
+          },
+          "face": {
+            "mean": 9.096628936333476,
+            "sd": 4.531045975448094,
+            "n": 8
+          },
+          "left_hand": {
+            "mean": 48.56917481290356,
+            "sd": 34.54775440493901,
+            "n": 8
+          },
+          "right_hand": {
+            "mean": 35.627730974878745,
+            "sd": 9.004881620018223,
+            "n": 8
+          }
+        },
+        "WHAC": {
+          "mre": {
+            "mean": 16.805322080716053,
+            "sd": 4.476287166653675,
+            "n": 8
+          },
+          "body": {
+            "mean": 25.093572058168448,
+            "sd": 3.0548579880415248,
+            "n": 8
+          },
+          "face": {
+            "mean": 8.440899617886105,
+            "sd": 2.059390633094528,
+            "n": 8
+          },
+          "left_hand": {
+            "mean": 26.048714900361006,
+            "sd": 14.174928221534792,
+            "n": 8
+          },
+          "right_hand": {
+            "mean": 25.507455248671718,
+            "sd": 6.756255297188234,
+            "n": 8
+          }
+        }
+      },
+      "before": "assets/videos/lsch-before.mp4",
+      "beforePoster": "assets/images/lsch-before.webp"
+    },
+    {
+      "id": "phoenix",
+      "name": "PHOENIX-2014-T",
+      "language": "German Sign Language",
+      "country": "Germany",
+      "n": 42,
+      "frames": 4568,
+      "width": 210,
+      "height": 260,
+      "fps": 25.0,
+      "source": "assets/videos/phoenix-source.mp4",
+      "poster": "assets/images/phoenix-source.webp",
+      "methods": {
+        "AiOS": {
+          "video": "assets/videos/phoenix-aios.mp4",
+          "poster": "assets/images/phoenix-aios.webp"
+        },
+        "HybrIK-X": {
+          "video": "assets/videos/phoenix-hybrik-x.mp4",
+          "poster": "assets/images/phoenix-hybrik-x.webp"
+        },
+        "Multi-HMR": {
+          "video": "assets/videos/phoenix-multi-hmr.mp4",
+          "poster": "assets/images/phoenix-multi-hmr.webp"
+        },
+        "OSX": {
+          "video": "assets/videos/phoenix-osx.mp4",
+          "poster": "assets/images/phoenix-osx.webp"
+        },
+        "PEAR": {
+          "video": "assets/videos/phoenix-pear.mp4",
+          "poster": "assets/images/phoenix-pear.webp"
+        },
+        "PyMAF-X": {
+          "video": "assets/videos/phoenix-pymaf-x.mp4",
+          "poster": "assets/images/phoenix-pymaf-x.webp"
+        },
+        "SMPLer-X": {
+          "video": "assets/videos/phoenix-smpler-x.mp4",
+          "poster": "assets/images/phoenix-smpler-x.webp"
+        },
+        "SMPLest-X": {
+          "video": "assets/videos/phoenix-smplest-x.mp4",
+          "poster": "assets/images/phoenix-smplest-x.webp"
+        },
+        "Video-to-SMPL-X": {
+          "video": "assets/videos/phoenix-video-to-smpl-x.mp4",
+          "poster": "assets/images/phoenix-video-to-smpl-x.webp"
+        },
+        "WHAC": {
+          "video": "assets/videos/phoenix-whac.mp4",
+          "poster": "assets/images/phoenix-whac.webp"
+        }
+      },
+      "scores": {
+        "AiOS": {
+          "mre": {
+            "mean": 4.982392539994765,
+            "sd": 1.014012523393092,
+            "n": 42
+          },
+          "body": {
+            "mean": 7.663938767578545,
+            "sd": 1.5484102678521523,
+            "n": 42
+          },
+          "face": {
+            "mean": 2.6640527647506227,
+            "sd": 0.6133382996396376,
+            "n": 42
+          },
+          "left_hand": {
+            "mean": 6.716704037547437,
+            "sd": 1.9321592709799038,
+            "n": 42
+          },
+          "right_hand": {
+            "mean": 8.357206048870555,
+            "sd": 2.60625233273094,
+            "n": 42
+          }
+        },
+        "HybrIK-X": {
+          "mre": {
+            "mean": 7.806512570782073,
+            "sd": 1.657502403418564,
+            "n": 42
+          },
+          "body": {
+            "mean": 9.536446377419342,
+            "sd": 2.8255848974655344,
+            "n": 42
+          },
+          "face": {
+            "mean": 4.591906457428013,
+            "sd": 1.0893937693760534,
+            "n": 42
+          },
+          "left_hand": {
+            "mean": 10.104134074340681,
+            "sd": 3.371683709392182,
+            "n": 42
+          },
+          "right_hand": {
+            "mean": 13.291302525227417,
+            "sd": 3.6113105369702314,
+            "n": 42
+          }
+        },
+        "Multi-HMR": {
+          "mre": {
+            "mean": 6.0412798182949405,
+            "sd": 1.001338955930912,
+            "n": 42
+          },
+          "body": {
+            "mean": 10.272232383449595,
+            "sd": 3.181722363965094,
+            "n": 42
+          },
+          "face": {
+            "mean": 2.5123938534310346,
+            "sd": 0.6791437450660915,
+            "n": 42
+          },
+          "left_hand": {
+            "mean": 10.482827923725274,
+            "sd": 3.601119783699908,
+            "n": 42
+          },
+          "right_hand": {
+            "mean": 9.969116935366959,
+            "sd": 1.5993680114718416,
+            "n": 42
+          }
+        },
+        "OSX": {
+          "mre": {
+            "mean": 7.687882326677278,
+            "sd": 1.1488206371396732,
+            "n": 42
+          },
+          "body": {
+            "mean": 10.480258782147057,
+            "sd": 1.5791822212762947,
+            "n": 42
+          },
+          "face": {
+            "mean": 4.987392603185957,
+            "sd": 1.6589418555789073,
+            "n": 42
+          },
+          "left_hand": {
+            "mean": 10.449546210963385,
+            "sd": 2.614124144004931,
+            "n": 42
+          },
+          "right_hand": {
+            "mean": 11.191498028202156,
+            "sd": 1.8060034720372415,
+            "n": 42
+          }
+        },
+        "PEAR": {
+          "mre": {
+            "mean": 3.242716710843889,
+            "sd": 0.5255881186140524,
+            "n": 42
+          },
+          "body": {
+            "mean": 5.325456753881896,
+            "sd": 1.058801417025148,
+            "n": 42
+          },
+          "face": {
+            "mean": 1.4645259436688804,
+            "sd": 0.15969109207000515,
+            "n": 42
+          },
+          "left_hand": {
+            "mean": 5.148518425572631,
+            "sd": 1.5447575878404531,
+            "n": 42
+          },
+          "right_hand": {
+            "mean": 5.411651589401929,
+            "sd": 1.187826314366911,
+            "n": 42
+          }
+        },
+        "PyMAF-X": {
+          "mre": {
+            "mean": 7.825588559693668,
+            "sd": 1.5704552556221538,
+            "n": 42
+          },
+          "body": {
+            "mean": 8.665220669975632,
+            "sd": 1.7331867211677685,
+            "n": 42
+          },
+          "face": {
+            "mean": 3.752279167393221,
+            "sd": 0.6424455923646024,
+            "n": 42
+          },
+          "left_hand": {
+            "mean": 12.66331630014174,
+            "sd": 4.508453009236893,
+            "n": 42
+          },
+          "right_hand": {
+            "mean": 13.399393372504672,
+            "sd": 3.509338992194534,
+            "n": 42
+          }
+        },
+        "SMPLer-X": {
+          "mre": {
+            "mean": 7.406137382675622,
+            "sd": 1.1679495610131234,
+            "n": 42
+          },
+          "body": {
+            "mean": 9.583598026244195,
+            "sd": 1.7537056054993698,
+            "n": 42
+          },
+          "face": {
+            "mean": 3.463534758015738,
+            "sd": 1.0161852517290213,
+            "n": 42
+          },
+          "left_hand": {
+            "mean": 11.2996996287555,
+            "sd": 2.170934111538197,
+            "n": 42
+          },
+          "right_hand": {
+            "mean": 12.91282520277401,
+            "sd": 2.532871803862895,
+            "n": 42
+          }
+        },
+        "SMPLest-X": {
+          "mre": {
+            "mean": 7.15551282386897,
+            "sd": 1.2252698864854965,
+            "n": 42
+          },
+          "body": {
+            "mean": 9.455964511009546,
+            "sd": 1.9419693910780496,
+            "n": 42
+          },
+          "face": {
+            "mean": 4.332096550513816,
+            "sd": 1.265485365465709,
+            "n": 42
+          },
+          "left_hand": {
+            "mean": 9.318867381217089,
+            "sd": 2.2207392774475974,
+            "n": 42
+          },
+          "right_hand": {
+            "mean": 11.445742882248604,
+            "sd": 2.14862679875675,
+            "n": 42
+          }
+        },
+        "Video-to-SMPL-X": {
+          "mre": {
+            "mean": 7.5789176227296124,
+            "sd": 1.1561065258559184,
+            "n": 42
+          },
+          "body": {
+            "mean": 8.337797948969435,
+            "sd": 1.725192488456412,
+            "n": 42
+          },
+          "face": {
+            "mean": 3.182406592570569,
+            "sd": 0.642911122746862,
+            "n": 42
+          },
+          "left_hand": {
+            "mean": 12.1055713295088,
+            "sd": 2.8231875064376997,
+            "n": 42
+          },
+          "right_hand": {
+            "mean": 14.189537688241344,
+            "sd": 2.7896682926154925,
+            "n": 42
+          }
+        },
+        "WHAC": {
+          "mre": {
+            "mean": 7.41742009487839,
+            "sd": 1.3117812311851995,
+            "n": 42
+          },
+          "body": {
+            "mean": 11.709319276396897,
+            "sd": 2.189217986262158,
+            "n": 42
+          },
+          "face": {
+            "mean": 4.223340989356647,
+            "sd": 1.0119583719826224,
+            "n": 42
+          },
+          "left_hand": {
+            "mean": 9.824727012185047,
+            "sd": 2.6009738011217443,
+            "n": 42
+          },
+          "right_hand": {
+            "mean": 11.849365054158055,
+            "sd": 2.65357681184058,
+            "n": 42
+          }
+        }
+      },
+      "before": "assets/videos/phoenix-before.mp4",
+      "beforePoster": "assets/images/phoenix-before.webp"
+    },
+    {
+      "id": "csl",
+      "name": "CSL-Daily",
+      "language": "Chinese Sign Language",
+      "country": "China",
+      "n": 29,
+      "frames": 1596,
+      "width": 512,
+      "height": 512,
+      "fps": 30.0,
+      "source": "assets/videos/csl-source.mp4",
+      "poster": "assets/images/csl-source.webp",
+      "methods": {
+        "AiOS": {
+          "video": "assets/videos/csl-aios.mp4",
+          "poster": "assets/images/csl-aios.webp"
+        },
+        "HybrIK-X": {
+          "video": "assets/videos/csl-hybrik-x.mp4",
+          "poster": "assets/images/csl-hybrik-x.webp"
+        },
+        "Multi-HMR": {
+          "video": "assets/videos/csl-multi-hmr.mp4",
+          "poster": "assets/images/csl-multi-hmr.webp"
+        },
+        "OSX": {
+          "video": "assets/videos/csl-osx.mp4",
+          "poster": "assets/images/csl-osx.webp"
+        },
+        "PEAR": {
+          "video": "assets/videos/csl-pear.mp4",
+          "poster": "assets/images/csl-pear.webp"
+        },
+        "PyMAF-X": {
+          "video": "assets/videos/csl-pymaf-x.mp4",
+          "poster": "assets/images/csl-pymaf-x.webp"
+        },
+        "SMPLer-X": {
+          "video": "assets/videos/csl-smpler-x.mp4",
+          "poster": "assets/images/csl-smpler-x.webp"
+        },
+        "SMPLest-X": {
+          "video": "assets/videos/csl-smplest-x.mp4",
+          "poster": "assets/images/csl-smplest-x.webp"
+        },
+        "Video-to-SMPL-X": {
+          "video": "assets/videos/csl-video-to-smpl-x.mp4",
+          "poster": "assets/images/csl-video-to-smpl-x.webp"
+        },
+        "WHAC": {
+          "video": "assets/videos/csl-whac.mp4",
+          "poster": "assets/images/csl-whac.webp"
+        }
+      },
+      "scores": {
+        "AiOS": {
+          "mre": {
+            "mean": 6.303349154185714,
+            "sd": 1.08772273145057,
+            "n": 29
+          },
+          "body": {
+            "mean": 6.993430089576221,
+            "sd": 1.0518623157223193,
+            "n": 29
+          },
+          "face": {
+            "mean": 3.383395224332184,
+            "sd": 0.9168645508826863,
+            "n": 29
+          },
+          "left_hand": {
+            "mean": 18.495758590688727,
+            "sd": 16.41689856014889,
+            "n": 26
+          },
+          "right_hand": {
+            "mean": 10.610189305477885,
+            "sd": 2.315437241751141,
+            "n": 29
+          }
+        },
+        "HybrIK-X": {
+          "mre": {
+            "mean": 9.828703906773717,
+            "sd": 1.9551116942404354,
+            "n": 29
+          },
+          "body": {
+            "mean": 10.399400575291489,
+            "sd": 2.6744209412944,
+            "n": 29
+          },
+          "face": {
+            "mean": 5.262821829594315,
+            "sd": 1.6077714115820854,
+            "n": 29
+          },
+          "left_hand": {
+            "mean": 32.778750869113836,
+            "sd": 33.254770938430404,
+            "n": 26
+          },
+          "right_hand": {
+            "mean": 16.353735050312306,
+            "sd": 3.680222379145994,
+            "n": 29
+          }
+        },
+        "Multi-HMR": {
+          "mre": {
+            "mean": 8.660523942961907,
+            "sd": 1.8407707541060299,
+            "n": 29
+          },
+          "body": {
+            "mean": 14.637472647358436,
+            "sd": 6.192651986298103,
+            "n": 29
+          },
+          "face": {
+            "mean": 4.162372068322605,
+            "sd": 1.2853592948102615,
+            "n": 29
+          },
+          "left_hand": {
+            "mean": 32.39594552507508,
+            "sd": 16.403605986912797,
+            "n": 26
+          },
+          "right_hand": {
+            "mean": 12.430188215565938,
+            "sd": 2.351080969606199,
+            "n": 29
+          }
+        },
+        "OSX": {
+          "mre": {
+            "mean": 10.579740556939207,
+            "sd": 1.772754351943662,
+            "n": 29
+          },
+          "body": {
+            "mean": 11.542227735691476,
+            "sd": 1.6396623013972047,
+            "n": 29
+          },
+          "face": {
+            "mean": 5.622093004430946,
+            "sd": 1.3941583987496102,
+            "n": 29
+          },
+          "left_hand": {
+            "mean": 26.90283168370379,
+            "sd": 18.685510713715793,
+            "n": 26
+          },
+          "right_hand": {
+            "mean": 18.499917051370527,
+            "sd": 3.705390809219763,
+            "n": 29
+          }
+        },
+        "PEAR": {
+          "mre": {
+            "mean": 4.650785326515979,
+            "sd": 0.796872391601701,
+            "n": 29
+          },
+          "body": {
+            "mean": 5.704216844055967,
+            "sd": 1.5423385353459478,
+            "n": 29
+          },
+          "face": {
+            "mean": 2.20525166572976,
+            "sd": 0.22334535736043162,
+            "n": 29
+          },
+          "left_hand": {
+            "mean": 18.83696363637895,
+            "sd": 23.61066162353221,
+            "n": 26
+          },
+          "right_hand": {
+            "mean": 7.654476565991382,
+            "sd": 1.9459917704444178,
+            "n": 29
+          }
+        },
+        "PyMAF-X": {
+          "mre": {
+            "mean": 8.635287313066708,
+            "sd": 1.8953342869045848,
+            "n": 29
+          },
+          "body": {
+            "mean": 8.791949088557331,
+            "sd": 1.4747655327992772,
+            "n": 29
+          },
+          "face": {
+            "mean": 5.184571455765462,
+            "sd": 1.5906656328717532,
+            "n": 29
+          },
+          "left_hand": {
+            "mean": 25.45666887209234,
+            "sd": 17.597993104886907,
+            "n": 26
+          },
+          "right_hand": {
+            "mean": 12.666637092082787,
+            "sd": 3.9059433553187657,
+            "n": 29
+          }
+        },
+        "SMPLer-X": {
+          "mre": {
+            "mean": 7.491381787717484,
+            "sd": 1.1550210838379646,
+            "n": 29
+          },
+          "body": {
+            "mean": 9.045266387276715,
+            "sd": 1.518435642711069,
+            "n": 29
+          },
+          "face": {
+            "mean": 3.543613325198632,
+            "sd": 1.0910246231475091,
+            "n": 29
+          },
+          "left_hand": {
+            "mean": 19.581010672728418,
+            "sd": 17.244232355933192,
+            "n": 26
+          },
+          "right_hand": {
+            "mean": 13.93182379579031,
+            "sd": 2.298177508512619,
+            "n": 29
+          }
+        },
+        "SMPLest-X": {
+          "mre": {
+            "mean": 7.09594773922446,
+            "sd": 1.1622478007839803,
+            "n": 29
+          },
+          "body": {
+            "mean": 10.086696471963174,
+            "sd": 1.906620512469717,
+            "n": 29
+          },
+          "face": {
+            "mean": 3.919891265169392,
+            "sd": 1.2438914817603206,
+            "n": 29
+          },
+          "left_hand": {
+            "mean": 19.094671322595076,
+            "sd": 13.610624287081636,
+            "n": 26
+          },
+          "right_hand": {
+            "mean": 11.31448389667845,
+            "sd": 2.3376516139333847,
+            "n": 29
+          }
+        },
+        "Video-to-SMPL-X": {
+          "mre": {
+            "mean": 11.685430822038581,
+            "sd": 2.1672654521389965,
+            "n": 29
+          },
+          "body": {
+            "mean": 13.788301817757159,
+            "sd": 2.5958338961860914,
+            "n": 29
+          },
+          "face": {
+            "mean": 4.026189854933073,
+            "sd": 1.0709357482865645,
+            "n": 29
+          },
+          "left_hand": {
+            "mean": 37.970341861164044,
+            "sd": 34.690742456236244,
+            "n": 26
+          },
+          "right_hand": {
+            "mean": 24.033905909252546,
+            "sd": 5.2577396688159865,
+            "n": 29
+          }
+        },
+        "WHAC": {
+          "mre": {
+            "mean": 10.802763858060214,
+            "sd": 1.9882348846697113,
+            "n": 29
+          },
+          "body": {
+            "mean": 13.270652727184428,
+            "sd": 3.0753617238894684,
+            "n": 29
+          },
+          "face": {
+            "mean": 5.729623374180074,
+            "sd": 2.015267336005722,
+            "n": 29
+          },
+          "left_hand": {
+            "mean": 24.160926272711553,
+            "sd": 17.68695284400458,
+            "n": 26
+          },
+          "right_hand": {
+            "mean": 18.97785339560616,
+            "sd": 3.263278345676359,
+            "n": 29
+          }
+        }
+      },
+      "before": "assets/videos/csl-before.mp4",
+      "beforePoster": "assets/images/csl-before.webp"
+    }
+  ],
+  "pilot": {
+    "poster": "assets/images/how2sign-source.webp",
+    "video": "assets/videos/how2sign-source.mp4",
+    "reconstruction": "assets/videos/how2sign-reconstruction.mp4",
+    "reconstructionPoster": "assets/images/how2sign-reconstruction.webp"
+  },
+  "totals": {
+    "sequences": 79,
+    "frames": 7002,
+    "reconstructions": 790
+  }
+}

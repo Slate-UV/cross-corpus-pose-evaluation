@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f5f0">
+  <meta name="description" content="A visual study of how ten methods reconstruct sign language in 3D. Explore the methods, datasets, camera alignment, and body, face and hand results.">
+  <meta property="og:title" content="Sign in 3D — A sign is more than a pose">
+  <meta property="og:description" content="Ten methods. Three datasets. A closer look at the body, face and hands.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://slate-uv.github.io/sign-in-3d/assets/images/social.jpg">
+  <link rel="canonical" href="https://slate-uv.github.io/sign-in-3d/">
+  <meta property="og:url" content="https://slate-uv.github.io/sign-in-3d/">
+  <title>Sign in 3D — A sign is more than a pose</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/fonts/body.css">
+  <link rel="stylesheet" href="assets/fonts/display.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="assets/results.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to the study</a>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="#main" aria-label="Sign in 3D, home"><span class="brand-symbol" aria-hidden="true">S<span>³</span></span> Sign in <strong>3D</strong></a>
+      <nav aria-label="Main navigation"><a href="#methods">Methods</a><a href="#datasets">Datasets</a><a href="#alignment">Alignment</a><a href="#results">Results</a></nav>
+      <a class="study-link" href="assets/study.pdf" target="_blank" rel="noopener">Read the study <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero section-shell" aria-labelledby="hero-title">
+      <div class="hero-intro">
+        <div><p class="eyebrow"><span class="live-dot" aria-hidden="true"></span> Sign language · Human mesh recovery</p><h1 id="hero-title">A sign is more<br>than a <em>pose.</em></h1></div>
+        <div class="hero-copy"><p>Small movements carry meaning.</p><p>We compare how ten methods reconstruct a signer’s body, face and hands in 3D—and how better camera alignment changes the result.</p><a class="text-link" href="#results">Explore the findings <span aria-hidden="true">↓</span></a></div>
+      </div>
+
+      <div class="demo" id="comparison">
+        <div class="demo-toolbar"><div class="tabs" id="demo-tabs" role="group" aria-label="Choose a dataset"><button class="active" type="button" data-dataset="lsch" aria-pressed="true">LSCh</button><button type="button" data-dataset="phoenix" aria-pressed="false">PHOENIX</button><button type="button" data-dataset="csl" aria-pressed="false">CSL-Daily</button></div><label class="method-select">Method <select id="demo-method" aria-label="Choose a reconstruction method"><option>PEAR</option></select><span aria-hidden="true">⌄</span></label></div>
+        <div class="video-pair hero-pair">
+          <figure class="video-panel"><div class="panel-label"><span class="panel-dot original-dot"></span>Original video</div><video id="demo-original" muted playsinline preload="metadata" poster="assets/images/lsch-source.webp" aria-label="Original Chilean Sign Language recording"></video></figure>
+          <figure class="video-panel mesh-panel"><div class="panel-label"><span class="panel-dot mesh-dot"></span><span id="demo-reconstruction-label">PEAR reconstruction</span></div><video id="demo-mesh" muted playsinline preload="metadata" poster="assets/images/lsch-pear.webp" aria-label="Three-dimensional reconstruction of the same signing"></video><span class="corner-note">Same moment. Same viewpoint.</span></figure>
+        </div>
+        <div class="playback"><button class="play-button" id="demo-play" type="button" aria-label="Play synchronized comparison"><span class="play-icon" aria-hidden="true">▶</span><span class="play-text">Play comparison</span></button><input id="demo-progress" class="timeline" type="range" min="0" max="1000" value="0" aria-label="Comparison playback position"><span class="playback-time" id="demo-time">0:00</span><button class="replay-button" id="demo-replay" type="button" aria-label="Replay comparison">↺</button></div>
+        <p class="demo-caption" id="demo-caption">Chilean Sign Language · LSCh (OF-HMR)</p>
+      </div>
+
+      <div class="stat-row" aria-label="Scope of the shared evaluation"><div><strong>10</strong><span>methods compared</span></div><div><strong>3</strong><span>datasets evaluated</span></div><div><strong>79</strong><span>signing sequences</span></div><div><strong>790</strong><span>3D reconstructions</span></div></div>
+      <div class="research-credit"><span>Miguel Yáñez &amp; Ana Aguilera</span><span>Universidad de Valparaíso, Chile</span></div>
+    </section>
+
+    <section class="journey section-shell" aria-labelledby="journey-title">
+      <div class="section-heading compact"><p class="section-index">The study, at a glance</p><h2 id="journey-title">From a video to a fair comparison.</h2></div>
+      <ol class="journey-track"><li><span>01</span><strong>Gather the methods</strong><p>Review approaches that recover a full 3D person.</p></li><li><span>02</span><strong>Bring the data together</strong><p>Keep the original frames, timing and order.</p></li><li><span>03</span><strong>Reconstruct the signer</strong><p>Give every method the same video.</p></li><li><span>04</span><strong>Align the camera</strong><p>Match the viewpoint, size and placement.</p></li><li><span>05</span><strong>Look closer</strong><p>Measure the body, face and each hand.</p></li></ol>
+    </section>
+
+    <section class="methods-section section-shell" id="methods" aria-labelledby="methods-title">
+      <div class="section-heading"><div><p class="section-index">01 / The methods</p><h2 id="methods-title">Ten ways to recover<br>a person in <em>3D.</em></h2></div><p>Human Mesh Recovery turns an ordinary image or video into a 3D human model. We brought together methods that represent the body, articulated hands and face.</p></div>
+      <div class="selection-line"><span><strong>12</strong> approaches in the initial collection</span><span aria-hidden="true">→</span><span><strong>10</strong> in the single-camera comparison</span><span class="selection-note">8 image methods · 2 video methods</span></div>
+      <div id="method-grid" class="method-grid" aria-label="The ten evaluated methods"></div>
+      <div class="multi-view-note"><span class="small-label">Also reviewed</span><strong>MAMMA &amp; MKA</strong><p>The reviewed configurations use multiple camera views, so they sit outside this single-camera comparison.</p></div>
+    </section>
+
+    <section class="dataset-band" id="datasets" aria-labelledby="datasets-title"><div class="section-shell">
+      <div class="section-heading"><div><p class="section-index">02 / The datasets</p><h2 id="datasets-title">Different languages.<br>Different recording conditions.</h2></div><p>Weather broadcasts, daily conversations and controlled recordings bring different challenges. We preserve each sequence’s original order and timing.</p></div>
+      <div id="dataset-grid" class="dataset-grid"></div>
+      <div class="pilot-row"><img src="assets/images/how2sign-source.webp" alt="American Sign Language signer from the How2Sign pilot" width="240" height="135" loading="lazy"><div><span class="small-label">Earlier exploration · American Sign Language</span><h3>How2Sign</h3><p>A short pilot helped examine where hand-position scores and visible finger shapes disagree.</p><div class="pilot-links"><button id="pilot-open" class="text-link" type="button">Watch the pilot <span aria-hidden="true">↗</span></button><a href="https://how2sign.github.io/" target="_blank" rel="noopener">About the dataset ↗</a></div></div><span class="pilot-badge">Pilot study</span></div>
+    </div></section>
+
+    <section class="alignment-section section-shell" id="alignment" aria-labelledby="alignment-title">
+      <div class="section-heading"><div><p class="section-index">03 / The alignment</p><h2 id="alignment-title">Right motion.<br>Better <em>placement.</em></h2></div><p>A reconstruction can appear too small, too low or too far away. We adjust the camera and the model’s placement to match the recording, while keeping its articulated pose and body shape.</p></div>
+      <div class="alignment-toolbar"><span class="small-label">Multi-HMR · Before &amp; after</span><div class="tabs" id="alignment-tabs" role="group" aria-label="Choose an alignment example"><button class="active" type="button" data-dataset="csl" aria-pressed="true">CSL-Daily</button><button type="button" data-dataset="phoenix" aria-pressed="false">PHOENIX</button><button type="button" data-dataset="lsch" aria-pressed="false">LSCh</button></div></div>
+      <div class="alignment-view"><figure class="video-panel"><div class="panel-label">Original</div><video id="alignment-original" muted playsinline preload="none" poster="assets/images/csl-source.webp" aria-label="Original recording for the alignment comparison"></video></figure><figure class="video-panel mesh-panel"><div class="panel-label"><span class="before-dot panel-dot"></span>Before alignment</div><video id="alignment-before" muted playsinline preload="none" poster="assets/images/csl-before.webp" aria-label="Reconstruction before camera alignment"></video></figure><figure class="video-panel mesh-panel"><div class="panel-label"><span class="mesh-dot panel-dot"></span>After alignment</div><video id="alignment-after" muted playsinline preload="none" poster="assets/images/csl-multi-hmr.webp" aria-label="Reconstruction after camera alignment"></video></figure></div>
+      <div class="playback alignment-playback"><button class="play-button" id="alignment-play" type="button" aria-label="Play synchronized alignment comparison"><span class="play-icon" aria-hidden="true">▶</span><span class="play-text">Play comparison</span></button><input id="alignment-progress" class="timeline" type="range" min="0" max="1000" value="0" aria-label="Alignment playback position"><span class="playback-time" id="alignment-time">0:00</span><button class="replay-button" id="alignment-replay" type="button" aria-label="Replay alignment comparison">↺</button></div>
+      <div class="alignment-principles"><div><span aria-hidden="true">↔</span><strong>Match the viewpoint</strong><p>Adjust camera scale, position and perspective.</p></div><div><span aria-hidden="true">◯</span><strong>Keep the person intact</strong><p>Preserve body dimensions and articulated pose.</p></div><div><span aria-hidden="true">✓</span><strong>Check the whole sequence</strong><p>Review regional errors, motion and head visibility.</p></div></div>
+    </section>
+
+    <section class="detail-band" id="details" aria-labelledby="details-title"><div class="section-shell detail-layout"><div><p class="section-index">04 / Why the details matter</p><h2 id="details-title">A small average error<br>can hide a different<br><em>hand shape.</em></h2><p>Finger position, hand shape and facial expression all contribute to signing. A single whole-body score cannot tell the whole story.</p><p class="detail-takeaway">So we look at the body, face and each hand separately—and inspect the matching images.</p></div><figure class="hand-figure"><div class="hand-labels"><span>Original</span><span>PyMAF-X</span><span>PEAR</span><span>Multi-HMR</span></div><img src="assets/images/hand-closeups.webp" alt="The same right hand in the original recording and three reconstructions, showing different finger shapes" loading="lazy" width="1600" height="250"><figcaption>The same right hand. Different reconstructions.</figcaption></figure></div></section>
+
+    <section class="results-section section-shell" id="results" aria-labelledby="results-title">
+      <div class="section-heading"><div><p class="section-index">05 / The results</p><h2 id="results-title">Look at every part.</h2></div><p>We measure the distance between matching points in the original image and the 3D reconstruction, seen through its camera. Smaller distances mean closer alignment.</p></div>
+      <div class="result-controls"><div class="tabs" id="result-tabs" role="group" aria-label="Choose results dataset"><button class="active" type="button" data-dataset="phoenix" aria-pressed="true">PHOENIX</button><button type="button" data-dataset="csl" aria-pressed="false">CSL-Daily</button><button type="button" data-dataset="lsch" aria-pressed="false">LSCh</button></div><label class="metric-select">Compare <select id="result-metric" aria-label="Choose the error measure"><option value="mre">Overall</option><option value="body">Body</option><option value="face">Face</option><option value="left_hand">Left hand</option><option value="right_hand">Right hand</option></select></label></div>
+      <div class="chart-heading"><div><h3 id="chart-title">Overall alignment</h3><p id="chart-subtitle">PHOENIX-2014-T · 42 sequences</p></div><span class="lower-badge"><span aria-hidden="true">↓</span> Lower is better</span></div>
+      <div id="result-chart" class="result-chart" role="img" aria-label="Mean reprojection errors for the ten methods"></div>
+      <div class="chart-footnote"><span>Average distance in pixels</span><span>One dataset at a time: image sizes differ.</span></div>
+      <div class="finding" id="result-finding" aria-live="polite"></div>
+      <div class="table-heading"><h3>All five measures</h3><span>Mean ± variation between sequences · pixels</span></div>
+      <div class="table-scroll" tabindex="0" role="region" aria-label="Detailed results; scroll horizontally on small screens"><table id="results-table"><caption id="results-caption">PHOENIX-2014-T results</caption><thead><tr><th scope="col">Method</th><th scope="col">Overall MRE</th><th scope="col">Body</th><th scope="col">Face</th><th scope="col">Left hand</th><th scope="col">Right hand</th></tr></thead><tbody></tbody></table></div>
+      <p class="measurement-note" id="measurement-note"></p>
+      <details class="measurement-details"><summary>What is being measured?<span aria-hidden="true">+</span></summary><div><p><strong>MRE</strong> means mean reprojection error: the average distance between corresponding points, measured in the original image’s pixels.</p><p>The comparison uses 99 points: six body points at the shoulders, elbows and wrists; 51 points inside the face; and 21 points per hand. Body error excludes face and finger points. All ten methods use the same eligible observations.</p><p>Errors are averaged within each sequence, then across sequences. The ± value is the sample standard deviation. Bold values mark the lowest mean in each column.</p><p>The reference points are estimated automatically. Camera alignment uses those same references. These results describe 2D agreement on the evaluated sequences; they do not establish 3D accuracy or preservation of linguistic meaning.</p></div></details>
+    </section>
+
+    <section class="closing-section section-shell"><p class="section-index">What this work brings together</p><h2>A shared way to look<br><em>closer at signing.</em></h2><p>A collection of reconstruction methods. A common evaluation across three datasets. Camera alignment that preserves the pose. And a separate look at every hand.</p><a class="button-primary" href="assets/study.pdf" target="_blank" rel="noopener">Read the full study <span aria-hidden="true">↗</span></a><span class="evaluation-date">Shared evaluation · 25 October 2026</span></section>
+  </main>
+
+  <footer class="site-footer section-shell"><div><a class="brand" href="#main">Sign in <strong>3D</strong></a><p>Miguel Yáñez &amp; Ana Aguilera<br>Universidad de Valparaíso, Chile</p></div><div class="footer-sources"><span class="small-label">Dataset sources</span><a href="https://www-i6.informatik.rwth-aachen.de/~koller/RWTH-PHOENIX-2014-T/" target="_blank" rel="noopener">RWTH-PHOENIX-2014-T ↗</a><a href="https://ustc-slr.github.io/datasets/2021_csl_daily/" target="_blank" rel="noopener">CSL-Daily ↗</a><a href="https://how2sign.github.io/" target="_blank" rel="noopener">How2Sign ↗</a></div><div class="media-credit"><span class="small-label">Research media</span><p>Recordings are credited to their respective datasets. LSCh examples are from OF-HMR.</p><p>How2Sign: Duarte et al., CVPR 2021 · <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>. Excerpts are resized for display.</p></div></footer>
+
+  <dialog id="pilot-dialog" aria-labelledby="pilot-title"><div class="dialog-heading"><div><span class="small-label">Earlier exploration</span><h2 id="pilot-title">How2Sign · American Sign Language</h2></div><button id="pilot-close" type="button" class="dialog-close" aria-label="Close pilot comparison">×</button></div><div class="video-pair"><figure class="video-panel"><div class="panel-label">Original</div><video id="pilot-original" muted playsinline preload="none" poster="assets/images/how2sign-source.webp" aria-label="Original How2Sign pilot sequence"></video></figure><figure class="video-panel mesh-panel"><div class="panel-label">Multi-HMR reconstruction</div><video id="pilot-mesh" muted playsinline preload="none" poster="assets/images/how2sign-reconstruction.webp" aria-label="Multi-HMR reconstruction of the How2Sign pilot"></video></figure></div><div class="playback"><button id="pilot-play" class="play-button" type="button"><span class="play-icon" aria-hidden="true">▶</span><span class="play-text">Play comparison</span></button><input id="pilot-progress" class="timeline" type="range" min="0" max="1000" value="0" aria-label="Pilot comparison playback position"><span class="playback-time" id="pilot-time">0:00</span><button id="pilot-replay" class="replay-button" type="button" aria-label="Replay pilot comparison">↺</button></div><p class="dialog-note">An exploratory sequence, separate from the three-dataset results above. How2Sign: Duarte et al., CVPR 2021.</p></dialog>
+  <noscript><p class="noscript-note">Interactive comparisons need JavaScript. The full study is available above.</p></noscript>
+</body>
+</html>
