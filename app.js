@@ -5,7 +5,7 @@
   if (!study) return;
   const $ = (selector) => document.querySelector(selector);
   const datasets = Object.fromEntries(study.datasets.map((d) => [d.id, d]));
-  const names = {mre: 'Overall alignment', body: 'Body alignment', face: 'Face alignment', left_hand: 'Left-hand alignment', right_hand: 'Right-hand alignment'};
+  const names = {mre: 'Overall MRE', body: 'Body MRE', face: 'Face MRE', left_hand: 'Left-hand MRE', right_hand: 'Right-hand MRE'};
   const regions = ['mre', 'body', 'face', 'left_hand', 'right_hand'];
   const format = (number) => number.toFixed(2);
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -146,7 +146,7 @@
 
   $('#method-grid').innerHTML = study.methods.map((method) => {
     const media = datasets.lsch.methods[method.name];
-    return `<article class="method-card"><div class="method-image"><img src="${media.poster}" alt="${method.name} reconstruction of the same Chilean Sign Language frame" width="400" height="340" loading="lazy"><span class="method-input">${method.input}</span></div><div class="method-card-text"><h3>${method.name}</h3><div class="method-actions"><button type="button" data-method="${method.name}" aria-label="Compare ${method.name} with the original video">Compare ↑</button>${method.paper ? `<a href="${method.paper}" target="_blank" rel="noopener" aria-label="Read the ${method.name} research paper">Paper ↗</a>` : ''}</div></div></article>`;
+    return `<article class="method-card"><div class="method-image"><img src="${media.poster}" alt="${method.name} reconstruction of the same Chilean Sign Language frame" width="400" height="340" loading="lazy"><span class="method-input">${method.input}</span></div><div class="method-card-text"><h3>${method.name}</h3><div class="method-actions"><button type="button" data-method="${method.name}" aria-label="Compare ${method.name} with the original video">View reconstruction</button>${method.paper ? `<a href="${method.paper}" target="_blank" rel="noopener" aria-label="Read the ${method.name} research paper">Reference</a>` : ''}</div></div></article>`;
   }).join('');
   $('#method-grid').addEventListener('click', (event) => {
     const button = event.target.closest('button[data-method]');
@@ -160,9 +160,9 @@
   });
 
   const datasetInfo = {
-    lsch: {title: 'LSCh · OF-HMR', description: 'Controlled recordings of Chilean Sign Language, evaluated from a single view.', link: '#comparison', label: 'Explore the recordings ↑'},
-    phoenix: {title: 'PHOENIX-2014-T', description: 'Weather interpretation with small, tightly framed images.', link: 'https://www-i6.informatik.rwth-aachen.de/~koller/RWTH-PHOENIX-2014-T/', label: 'About the dataset ↗'},
-    csl: {title: 'CSL-Daily', description: 'Everyday topics, natural signing and frequent hand–body interaction.', link: 'https://ustc-slr.github.io/datasets/2021_csl_daily/', label: 'About the dataset ↗'}
+    lsch: {title: 'LSCh · OF-HMR', description: 'Chilean Sign Language recordings evaluated from a single camera view.', link: '#comparison', label: 'Video comparison'},
+    phoenix: {title: 'PHOENIX-2014-T', description: 'German Sign Language interpretations of television weather forecasts.', link: 'https://www-i6.informatik.rwth-aachen.de/~koller/RWTH-PHOENIX-2014-T/', label: 'Dataset source'},
+    csl: {title: 'CSL-Daily', description: 'Chinese Sign Language recordings of daily-life topics.', link: 'https://ustc-slr.github.io/datasets/2021_csl_daily/', label: 'Dataset source'}
   };
   $('#dataset-grid').innerHTML = study.datasets.map((dataset) => {
     const info = datasetInfo[dataset.id];
